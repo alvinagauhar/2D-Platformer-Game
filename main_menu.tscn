@@ -51,7 +51,7 @@ theme_override_colors/font_color = Color(0.867638, 0.727671, 0.00726505, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.0862745, 0.176471, 1)
 theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 120
-text = "Thunder Run
+text = "ThunderRun
 "
 
 [node name="TextureRect" type="TextureRect" parent="."]

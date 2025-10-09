@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdy3wrmsw8dgm"]
+[gd_scene load_steps=6 format=3 uid="uid://bdy3wrmsw8dgm"]
 
 [ext_resource type="PackedScene" uid="uid://c15rtwan08wxf" path="res://player.tscn" id="1_hly68"]
+[ext_resource type="PackedScene" uid="uid://bbelfisdm4g43" path="res://obstacle.tscn" id="2_bvgre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvgre"]
 size = Vector2(700.5, 138.5)
@@ -37,3 +38,6 @@ offset_bottom = 593.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_hly68")]
 position = Vector2(498, 404)
+
+[node name="Obstacle" parent="." instance=ExtResource("2_bvgre")]
+position = Vector2(606, 427)

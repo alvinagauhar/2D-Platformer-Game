@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://c15rtwan08wxf"]
+[gd_scene load_steps=19 format=3 uid="uid://c15rtwan08wxf"]
 
-[ext_resource type="Script" uid="uid://fjedbfbsfa08" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bms3gn2axj8d2" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://kx5o55kky720" path="res://Dino Player/DinoSprites - doux.png" id="2_i3pqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sh265"]
@@ -38,18 +38,6 @@ region = Rect2(24, 0, 24, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
 atlas = ExtResource("2_i3pqv")
 region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
-atlas = ExtResource("2_i3pqv")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
-atlas = ExtResource("2_i3pqv")
-region = Rect2(96, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
-atlas = ExtResource("2_i3pqv")
-region = Rect2(120, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
 atlas = ExtResource("2_i3pqv")
@@ -111,19 +99,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nvl01")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ivps1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_urp6f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bwjto")
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -149,7 +128,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Dinosaur" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -160,4 +139,7 @@ shape = SubResource("CapsuleShape2D_sh265")
 position = Vector2(1, 9)
 scale = Vector2(6.20833, 6.3125)
 sprite_frames = SubResource("SpriteFrames_4flbx")
-animation = &"Idle"
+animation = &"Move"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(54, -42)
